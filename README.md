@@ -57,21 +57,31 @@ sudo chown -R www-data:www-data /var/www/example.com/public/yt-dl
 - Find $video_path within the video_download.php file. Change this to the same location as ytdl.sh videoDIR
 - Find $script_path within the video_download.php file. Change this to the location you put the project (yt-dl in the above example)
 - Finally, create a log file and directory where you just specified. Change the permissions the same way we did previously
+
 ```
 sudo chown -R www-data:www-data videos
 sudo chown -R www-data:www-data ytlog.txt
 ```
 
-7. Optional - Create a cronjob to clear old videos
+7. Optional - Create a cronjob to clear old videos every week
 - In this example, replace /home/alex/videos/* with the location of your video directory
+- If you are prompted to choose a text editor, Nano is the easiest option. Pressing Control + X will let you save and exit
 
 ```
-sudo systemctl enable cron
+sudo apt update && sudo apt install cron
+sudo systemctl enable --now cron
 sudo crontab -e
-0 0 * * * rm -r /home/alex/videos/*
+@weekly rm -r /home/alex/videos/*
 ```
 
-8. Optional - Edit PHP options
+8. Optional - Create cronjob to update yt-dlp every week
+
+```
+sudo crontab -e
+@weekly yt-dlp --update
+```
+
+9. Optional - Edit PHP options
 - If you download longer videos, PHP execution time may not be long enough. You may also need additional RAM
 - In Debian 11, this file is located here: /etc/php/7.4/apache2/php.ini
     * Change max_execution_time = 30 to max_execution_time = 300
