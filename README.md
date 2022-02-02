@@ -96,4 +96,4 @@ sudo crontab -e
 ![video download](/images/videodownload.png)
 
 ## ytdl.sh config
-1[yt download](/images/ytdl.png)
+![yt download](/images/ytdl.png)
