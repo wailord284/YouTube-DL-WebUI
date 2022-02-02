@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+  background-color: lightgrey;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #0B406B;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #215B8A;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 50px;
+}
+
+#image{
+display:none;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+h1 {text-align: center;}
+h2 {text-align: center;}
+h3 {text-align: center;}
+</style>
+    <head>
+        <title>Alex's Video Download</title>
+	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    </head>
+    <body>
+        <h1>Alex's Video Downloader Support and Help</h1>
+	<h2><a href="https://ytdl-org.github.io/youtube-dl/supportedsites.html"> Click here to see all supported websites</a></h2>
+	<div>
+	<img src="spectrumnetwork.png" alt="SpectrumNetworks" class="center">
+	<body>
+	</div>
+	<h2>About and How This Works</h2>
+	<p>This video downloader supports about 1000 websites due to it being based on a free utility called <a href="https://github.com/ytdl-org/youtube-dl"> youtube-dl.</a> This website is essentially nothing more than a friendly interface for the traditional command line based utility.</p>
+	<p>Due to the nature of big websites like youtube and instagram, APIs and other download methods used by youtube-dl can be found to be frequntly broken. And since this utility is free and open source, it is maintained by nothing more than volunteers. This means that if a video fails to download (like instagram), it most likely means that the website changed some crucial source of information required by youtube-dl to successfully download the video and it could take several days or months before official support for downloading from the broken website is restored by the youtube-dl maintainers.</p>
+	<p>Videos are downloaded in the highest quality availible. This means downloads may take some time to process so please be patient!</p>
+	<h2>Broken or Unsupported</h2>
+	<h3>Instagram</h3>
+	<br>As of now, Instagram is broken in youtube-dl. However, I was able to make a workaround using <a href="https://github.com/mikf/gallery-dl"> gallery-dl.</a><br>
+	<h3>C-span</h3>
+	<br>Some c-span videos <a href="https://www.c-span.org/video/?c4937004/user-clip-trump-speech-raw"> like this one</a> currently do not work. This is because this video was not uploaded by c-span themselves and is missing important information required by youtube-dl to download.
+	<br>You can tell which c-span videos are broken if they have "This clip, title, and description were not created by C-SPAN." In orange at the top of the video under its title.
+	<h3>Netflix (vandam.netflix or netflix.com)</h3>
+	<p>Netflix does not, and will never be supported. This is copyrighted content and will never be supported by youtube-dl. It is also heavily protected with DRM making downloads very difficult. If you try to download anything with netflix.com in the name, expect this to fail. </p>
+	</p>
+	</body>
+<html>
+<style>

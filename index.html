@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+  background-color: lightgrey;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #0B406B;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #215B8A;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 50px;
+}
+
+#image{
+display:none;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+h1 {text-align: center;}
+h2 {text-align: center;}
+</style>
+    <head>
+        <title>Alex's Video Download</title>
+	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    </head>
+    <body>
+        <h1>Welcome to the YouTubinator</h1>
+	<h2>A Alex Gaudino Inator</h2>
+	<h2><a href="https://ytdl-org.github.io/youtube-dl/supportedsites.html">Click here to see all supported websites</a></h2>
+	<div>
+	<img src="ytdl.jpg" alt="Download" class="center">
+		<p>Enter your URL into the field below and press submit to get started</p>
+		<form action="/dl/video_download.php" method="post" spellcheck="false">
+  		<br> <label for="videoLink">Video Link</label> </br>
+		<input type="text" id="videoLink" name="videoLink" placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+		<label for="videoOutput">Desired Output</label>
+    		<select id="videoOutput" name="videoOutput">
+      		<option value="video">Audio and Video Merged</option>
+      		<option value="audio">Audio Only (May not work on anything other than youtube)</option>
+		<input type="submit" onclick="imageShow()" value="Click to start video processing">
+                <img src="loading.gif" id="image" alt="Loading" class="center">
+
+	        <script>
+         	    function imageShow(){
+                    	document.getElementById('image').style.display = "block";
+                    }
+        	</script>
+
+		</select>
+		</form>
+	<h1><a href="https://wailord284.club/dl/support.html">Please click here to see current limitations and broken/unsupported sites!</a></h1>
+	</div>
+    </body>
+</html>
