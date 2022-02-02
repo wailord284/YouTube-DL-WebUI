@@ -1,6 +1,7 @@
 #!/bin/bash
 #Set video directory
 videoDIR="/home/alex/videos"
+logDIR="/home/alex/ytlog.txt"
 #Take user input from the php script
 while [ -n "$1" ]; do
 
@@ -34,7 +35,7 @@ while [ -n "$1" ]; do
 done
 #Create log file to see how many videos have been downloaded
 date=$(date)
-echo "$date : $ipAddress : $userBrowser : $userOS : $subFolder : $videoType : $videoLink" >> /home/alex/ytlog.txt
+echo "$date : $ipAddress : $userBrowser : $userOS : $subFolder : $videoType : $videoLink" >> "$logDIR"
 #Make sure filename is less than 255 characters
 LC_ALL=en_US.UTF-8 videoName=$(yt-dlp --get-filename "$videoLink" --output "%(title)s" | cut -c1-120 | sed -e 's/$/.mp4/')
 
