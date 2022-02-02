@@ -6,7 +6,7 @@ This is a small project that creates a simple and easy to use user interface for
 ## Landing page
 ![Landing Page](/images/landing.png)
 ## Downloading
-![Downloading](/images/downloading.gif)
+![Downloading](/images/downloading.png)
 
 # What it offers
 - A default option to download a video
