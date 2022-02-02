@@ -1,5 +1,5 @@
 #!/bin/bash
-#Set video directory
+#Set video and log directory
 videoDIR="/home/alex/videos"
 logDIR="/home/alex/ytlog.txt"
 #Take user input from the php script
