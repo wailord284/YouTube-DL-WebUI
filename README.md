@@ -86,3 +86,14 @@ sudo crontab -e
 - In Debian 11, this file is located here: /etc/php/7.4/apache2/php.ini
     * Change max_execution_time = 30 to max_execution_time = 300
     * Change memory_limit = 128M to memory_limit = 1024M
+
+
+# Config Examples
+## Cron
+![Cron Example](/images/cron.png)
+
+## video_download.php config
+![video download](/images/videodownload.png)
+
+## ytdl.sh config
+1[yt download](/images/ytdl.png)
